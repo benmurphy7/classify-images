@@ -84,7 +84,7 @@ else:
         graph_def.ParseFromString(f.read())
         _ = tf.import_graph_def(graph_def, name='')
 
-    #Classify and sort each image
+    # Classify and sort images
     with tf.Session() as sess:
         p_count = 1
         for f in onlyfiles:
